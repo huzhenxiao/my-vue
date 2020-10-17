@@ -7,7 +7,7 @@
 <script>
 import emitter from '../mixins/emitter'
 export default {
-  inheritAttrs: false, // 设置为false避免设置到根元素上
+  inheritAttrs: false, // 设置为false避免$attrs设置到根元素上
   mixins:[emitter],
   name: "KInput",
   props: {

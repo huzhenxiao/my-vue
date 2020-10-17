@@ -13,6 +13,7 @@ class KVueRouter {
     // Vue.util.defineReactive(this, "current", "/");
     this.current = window.location.hash.slice(1) || '/';
     Vue.util.defineReactive(this,'matched',[]);
+    // match方法可以递归遍历路由表，获取匹配关系数组
     this.match();
 
 
@@ -50,6 +51,7 @@ class KVueRouter {
     for (const route of routes) {
       if(route.path === '/' && this.current === '/'){
         this.matched.push(route);
+        return
       }
       // /about/info
       if(route.path !== '/' && this.current.indexOf(route.path) !== -1){

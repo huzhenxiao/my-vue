@@ -10,5 +10,6 @@ export default {
     // <router-link to="/about">xxx</router-link>
     // h(tag,data,children)
     return h("a", { attrs: { href: `#${this.to}` } }, this.$slots.default);
+    // return <a href={`#${this.to}`}>{this.$slots.default}</a>
   },
 }
